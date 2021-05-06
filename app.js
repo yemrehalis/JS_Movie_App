@@ -5,6 +5,7 @@ const IMGPATH = 'https://image.tmdb.org/t/p/w1280';
 
 
 
+
 async function getMovies() {
 
     const resp = await fetch(APIURL);
@@ -15,6 +16,7 @@ async function getMovies() {
 
     respData.results.forEach((movie) => {
 
+        const main = document.getElementById("main");
         const { poster_path, title, vote_average } = movie;
 
         const movieEl = document.createElement("div");
@@ -36,7 +38,7 @@ async function getMovies() {
         
         `;
 
-        document.body.appendChild(movieEl);
+        main.appendChild(movieEl);
 
 
     });
