@@ -131,7 +131,8 @@ main{
     position: absolute;
     width: 100%;
     font-weight: bold;
-    font-family: sans-serif;
+    max-height: 100%;
+    overflow: auto;
     color: white;
     
 }
